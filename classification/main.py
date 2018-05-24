@@ -195,7 +195,7 @@ if __name__ == '__main__':
                         "initializer mode: random_uniform_initializer/ random_normal_initializer/ truncated_normal_initializer, default is truncated_normal_initializer")
     flags.DEFINE_string("rnn_mode", 'lstm', "rnn_mode: lstm/gru, default is lstm cell")
     flags.DEFINE_string("section", 'DNN', "section")
-    flags.DEFINE_string("is_training", 'test', "train or test")
+    flags.DEFINE_string("is_training", 'train', "train or test")
     flags.DEFINE_bool("bi_directional", False, "True")
     flags.DEFINE_bool("attention", False, "attention")
     flags.DEFINE_bool("is_measured_data", False, "is_measured_data")
