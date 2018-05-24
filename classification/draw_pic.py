@@ -67,7 +67,7 @@ def draw_pic():
     measured_result = measured_result[['accuracy', 'test_data_dir']]
     measured_result.plot(kind='barh', x='test_data_dir', grid=True, title='measured data result')
     plt.show()
-    aaa = 1
+    aaa = 2
 
 if __name__ == '__main__':
     draw_pic()
