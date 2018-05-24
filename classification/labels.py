@@ -126,7 +126,7 @@ def writeList(filePath, listToWrite):
 def makeTrainData():
     # rootdir = './trajectory_data'
     # save_dir = './Data_Geolife'
-    rootdir = u'/media/luofeng/新加卷1/实验室/项目/轨迹预测与分类/gps data/measured'
+    rootdir = unicode('/media/luofeng/新加卷/实验室/项目/轨迹预测与分类/gps data/measured', "utf-8")
     save_dir= './Data_measured'
     train_dir = 'all_cl'
     test_dir = 'all_init'

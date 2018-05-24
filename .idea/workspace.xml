@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="389f4711-560f-472b-8491-14b566e6e666" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/classification/Dataloader.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/featureExtract.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/labels.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/main.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/ml_method.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/ml_models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/model.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/classification/splitByNumSeqs.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classification/labels.py" afterPath="$PROJECT_DIR$/classification/labels.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +23,7 @@
     <SUITE FILE_PATH="coverage/GeolifeData$main.coverage" NAME="main Coverage Results" MODIFIED="1527150803818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/GeolifeData$test.coverage" NAME="test Coverage Results" MODIFIED="1526538538848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_for_measured_data" />
     <SUITE FILE_PATH="coverage/GeolifeData$baiduSearch.coverage" NAME="baiduSearch Coverage Results" MODIFIED="1508899642321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
-    <SUITE FILE_PATH="coverage/GeolifeData$labels.coverage" NAME="labels Coverage Results" MODIFIED="1527151265482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/GeolifeData$labels.coverage" NAME="labels Coverage Results" MODIFIED="1527151519815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/GeolifeData$hdf5format.coverage" NAME="hdf5format Coverage Results" MODIFIED="1506332047970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GeolifeData$main_py.coverage" NAME="main.py Coverage Results" MODIFIED="1523802799020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_tmp" />
     <SUITE FILE_PATH="coverage/GeolifeData$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1526545888859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_for_measured_data" />
@@ -69,8 +61,8 @@
       <file leaf-file-name="labels.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classification/labels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="128" column="69" lean-forward="true" selection-start-line="128" selection-start-column="69" selection-end-line="128" selection-end-column="69" />
+            <state relative-caret-position="310">
+              <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
               </folding>
@@ -1120,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/labels.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="128" column="69" lean-forward="true" selection-start-line="128" selection-start-column="69" selection-end-line="128" selection-end-column="69" />
+        <state relative-caret-position="310">
+          <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
           </folding>
