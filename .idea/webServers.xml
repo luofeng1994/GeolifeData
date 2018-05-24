@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3b1894cd-4e2f-49d7-9fa4-58833f468d8e" name="labserver" url="http://10.112.239.111">
+        <fileTransfer host="10.112.239.111" port="22" rootFolder="/home/luofeng" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

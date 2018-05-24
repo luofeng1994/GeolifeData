@@ -1,0 +1,8 @@
+accuracy,metrics_record_dir,metrics_record_file,section
+0.1808258187,./metrics_record,./ml_record.csv,NB
+0.836971998102,./metrics_record,./ml_record.csv,KNN
+0.766018035121,./metrics_record,./ml_record.csv,LR
+0.888941623161,./metrics_record,./ml_record.csv,RF
+0.842904603702,./metrics_record,./ml_record.csv,DT
+0.822021831989,./metrics_record,./ml_record.csv,SVM
+0.886331276697,./metrics_record,./ml_record.csv,GBDT
