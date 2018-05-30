@@ -65,12 +65,16 @@ def train(args):
     args.num_classes = dataloader.num_classes
     args.feature_dim = dataloader.feature_dim
     logger.info('dataloder finished.')
+    logger.info('batch_size: {}'.format(args.batch_size))
+    logger.info('num_steps: {}'.format(args.num_steps))
     logger.info('num_classes: {}'.format(args.num_classes))
     logger.info('feature_dim: {}'.format(args.feature_dim))
     logger.info('num_layers: {}'.format(args.num_layers))
     logger.info('batch_size: {}'.format(args.batch_size))
     logger.info('batch_num: {}'.format(dataloader.batch_num))
     logger.info('epoches: {}'.format(args.epochs))
+    logger.info('record: {}'.format(args.record))
+    logger.info('metrics_record_file: {}'.format(args.metrics_record_file))
     logger.info('label dict: {}'.format(dataloader.label_dict))
     model = Model(args)
     logger.info('model build finished')
@@ -117,12 +121,17 @@ def test(args):
     args.num_classes = dataloader.num_classes
     args.feature_dim = dataloader.feature_dim
     model = Model(args)
+    logger.info('dataloder finished.')
+    logger.info('batch_size: {}'.format(args.batch_size))
+    logger.info('num_steps: {}'.format(args.num_steps))
     logger.info('num_classes: {}'.format(args.num_classes))
     logger.info('feature_dim: {}'.format(args.feature_dim))
     logger.info('num_layers: {}'.format(args.num_layers))
     logger.info('batch_size: {}'.format(args.batch_size))
     logger.info('batch_num: {}'.format(dataloader.batch_num))
     logger.info('epoches: {}'.format(args.epochs))
+    logger.info('record: {}'.format(args.record))
+    logger.info('metrics_record_file: {}'.format(args.metrics_record_file))
     logger.info('label dict: {}'.format(dataloader.label_dict))
     count = 0
     correct_count = 0

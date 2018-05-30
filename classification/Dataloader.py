@@ -57,7 +57,7 @@ class Dataloder():
                     self.files.append('{}_{}'.format(transport_mode, file))
                     self.data['{}_{}'.format(transport_mode, file)] = vector
                     self.data_label['{}_{}'.format(transport_mode, file)] = label
-                    self.data_length['{}_{}'.format(transport_mode, file)] = len(vector)
+                    self.data_length['{}_{}'.format(transport_mode, file)] = min(len(vector), self.num_steps)
         self.raw_num = len(self.files)
         self.batch_num = self.raw_num/self.batch_size+1
         self.num_classes = len(self.classes_to_handle)
