@@ -12,3 +12,5 @@
 /prediction/classes/
 /prediction/word2vec/save/
 /prediction/word2vec/save_windowns5/
+*.bak
+*.pyc
