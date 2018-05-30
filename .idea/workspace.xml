@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="389f4711-560f-472b-8491-14b566e6e666" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/classification/labels.py" afterPath="$PROJECT_DIR$/classification/labels.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/GeolifeData.iml" afterPath="$PROJECT_DIR$/.idea/GeolifeData.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/classification/main.py" afterPath="$PROJECT_DIR$/classification/main.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +22,7 @@
     <SUITE FILE_PATH="coverage/GeolifeData$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1523497922211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_tmp" />
     <SUITE FILE_PATH="coverage/GeolifeData$Nosetests_in_main_py.coverage" NAME="Nosetests in main.py Coverage Results" MODIFIED="1525920457143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_for_measured_data" />
     <SUITE FILE_PATH="coverage/GeolifeData$ml_method.coverage" NAME="ml_method Coverage Results" MODIFIED="1527148942965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
-    <SUITE FILE_PATH="coverage/GeolifeData$main.coverage" NAME="main Coverage Results" MODIFIED="1527150803818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/GeolifeData$main.coverage" NAME="main Coverage Results" MODIFIED="1527671650006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/GeolifeData$test.coverage" NAME="test Coverage Results" MODIFIED="1526538538848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_for_measured_data" />
     <SUITE FILE_PATH="coverage/GeolifeData$baiduSearch.coverage" NAME="baiduSearch Coverage Results" MODIFIED="1508899642321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
     <SUITE FILE_PATH="coverage/GeolifeData$labels.coverage" NAME="labels Coverage Results" MODIFIED="1527151519815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
@@ -51,21 +53,19 @@
       <file leaf-file-name="draw_pic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/draw_pic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
+            <state relative-caret-position="27">
               <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="labels.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="labels.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/labels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-              <folding>
-                <element signature="e#24#55#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,8 +73,8 @@
       <file leaf-file-name="featureExtract.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/featureExtract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="27">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classification/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="197" column="45" lean-forward="false" selection-start-line="197" selection-start-column="45" selection-end-line="197" selection-end-column="45" />
+            <state relative-caret-position="459">
+              <caret line="198" column="52" lean-forward="true" selection-start-line="198" selection-start-column="52" selection-end-line="198" selection-end-column="52" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -94,8 +94,54 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="train.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/Data_Geolife/train/train.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384777">
+              <caret line="14251" column="50" lean-forward="false" selection-start-line="14251" selection-start-column="50" selection-end-line="14251" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ml_method.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/ml_method.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lstm_bn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/lstm_bn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#47#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -104,44 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="378">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/indexing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38595">
-              <caret line="1268" column="0" lean-forward="false" selection-start-line="1268" selection-start-column="0" selection-end-line="1268" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/generic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32953">
-              <caret line="1120" column="0" lean-forward="false" selection-start-line="1120" selection-start-column="0" selection-end-line="1120" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -215,8 +228,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/classification/draw_pic.py" />
         <option value="$PROJECT_DIR$/classification/ml_method.py" />
-        <option value="$PROJECT_DIR$/classification/main.py" />
         <option value="$PROJECT_DIR$/classification/labels.py" />
+        <option value="$PROJECT_DIR$/classification/main.py" />
       </list>
     </option>
   </component>
@@ -261,6 +274,19 @@
               <item name="GeolifeData" type="462c0819:PsiDirectoryNode" />
               <item name="classification" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GeolifeData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GeolifeData" type="462c0819:PsiDirectoryNode" />
+              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="Data_Geolife" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GeolifeData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GeolifeData" type="462c0819:PsiDirectoryNode" />
+              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="Data_Geolife" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -271,7 +297,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/classification/main.py" />
+    <property name="last_opened_file_path" value="/usr/local/lib/python2.7" />
     <property name="SearchEverywhereHistoryKey" value="writeList&#9;null&#9;null&#10;getDate&#9;null&#9;null" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/classification/main.py" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -305,7 +331,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.labels">
+  <component name="RunManager" selected="Python.main">
     <configuration name="draw_pic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -676,22 +702,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2353" y="-4" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34689507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.62173456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40364027" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991913" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13899614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6850524" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3736952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5799373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -821,15 +846,15 @@
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/classification/featureExtract.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="147" />
+          <url>file://$PROJECT_DIR$/classification/main.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="148" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="148" />
+      <option name="time" value="150" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -839,44 +864,11 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classification_for_measured_data/featureExtract.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/platform/flags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="76" column="45" lean-forward="false" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/reshape/concat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1887">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/test.csv" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/log/train_DNN_2018-05-17_14-36.log" />
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="314" column="38" lean-forward="false" selection-start-line="314" selection-start-column="38" selection-end-line="314" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/ops/nn_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="1620" column="0" lean-forward="false" selection-start-line="1620" selection-start-column="0" selection-end-line="1620" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="1099" column="0" lean-forward="false" selection-start-line="1099" selection-start-column="0" selection-end-line="1099" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/ops/nn_ops.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/tensorflow/python/client/session.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/Dataloader.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/metrics_record/record.csv" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/log/DNN/DNN_train_2018-05-17_16-31.log" />
@@ -885,95 +877,22 @@
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/Data_measured/train/train.csv" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/Data_measured/test/test.csv" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/labels.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="315" column="51" lean-forward="true" selection-start-line="315" selection-start-column="51" selection-end-line="315" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/ensemble/forest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3317">
-          <caret line="219" column="22" lean-forward="false" selection-start-line="219" selection-start-column="22" selection-end-line="219" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/linear_model/logistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1550">
-          <caret line="1175" column="22" lean-forward="false" selection-start-line="1175" selection-start-column="22" selection-end-line="1175" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="613" column="0" lean-forward="false" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35526">
-          <caret line="1164" column="13" lean-forward="false" selection-start-line="1164" selection-start-column="13" selection-end-line="1164" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/metrics/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/preprocessing/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17081">
-          <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/naive_bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4340">
-          <caret line="156" column="8" lean-forward="false" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/grid_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/cross_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/ensemble/gradient_boosting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43369">
-          <caret line="1438" column="8" lean-forward="false" selection-start-line="1438" selection-start-column="8" selection-end-line="1438" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/frame.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/ensemble/forest.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/linear_model/logistic.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/utils/validation.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/metrics/classification.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/metrics/__init__.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/preprocessing/data.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/naive_bayes.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/grid_search.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/cross_validation.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/sklearn/ensemble/gradient_boosting.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/ml_models.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/model.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/main.py" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/metrics_record/ml_record.csv" />
     <entry file="file://$PROJECT_DIR$/classification_for_measured_data/ml_method.py" />
-    <entry file="file://$PROJECT_DIR$/classification/Data_Geolife/train/train.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441781">
-          <caret line="14251" column="50" lean-forward="false" selection-start-line="14251" selection-start-column="50" selection-end-line="14251" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification/Data_Geolife/train/walk/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -992,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1395">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,105 +935,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27528">
-          <caret line="923" column="0" lean-forward="false" selection-start-line="923" selection-start-column="0" selection-end-line="923" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32953">
-          <caret line="1120" column="0" lean-forward="false" selection-start-line="1120" selection-start-column="0" selection-end-line="1120" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="2786" column="0" lean-forward="false" selection-start-line="2786" selection-start-column="0" selection-end-line="2786" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38595">
-          <caret line="1268" column="0" lean-forward="false" selection-start-line="1268" selection-start-column="0" selection-end-line="1268" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/ops.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/generic.py" />
+    <entry file="file:///usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/indexing.py" />
     <entry file="file://$PROJECT_DIR$/classification/ml_method.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/ml_method.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/draw_pic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
+        <state relative-caret-position="27">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/lstm_bn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/absl/flags/_flagvalues.py" />
+    <entry file="file://$PROJECT_DIR$/classification/labels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/featureExtract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="27">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classification/main.py">
+    <entry file="file://$PROJECT_DIR$/classification/ml_method.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="197" column="45" lean-forward="false" selection-start-line="197" selection-start-column="45" selection-end-line="197" selection-end-column="45" />
+        <state relative-caret-position="243">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classification/labels.py">
+    <entry file="file://$PROJECT_DIR$/classification/Data_Geolife/train/train.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+        <state relative-caret-position="384777">
+          <caret line="14251" column="50" lean-forward="false" selection-start-line="14251" selection-start-column="50" selection-end-line="14251" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="198" column="52" lean-forward="true" selection-start-line="198" selection-start-column="52" selection-end-line="198" selection-end-column="52" />
           <folding>
-            <element signature="e#24#55#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

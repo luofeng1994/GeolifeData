@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/classification/featruedData" />
       <excludeFolder url="file://$MODULE_DIR$/prediction/classes" />
       <excludeFolder url="file://$MODULE_DIR$/prediction/classes_100_5_50_5" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

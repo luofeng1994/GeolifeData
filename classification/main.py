@@ -178,6 +178,8 @@ if __name__ == '__main__':
     flags.DEFINE_integer("grad_clip", 5, "grad_clip")
     flags.DEFINE_integer("epochs", 50, "epochs")
     flags.DEFINE_integer("save_every_n", 200, "save_every_n")
+    flags.DEFINE_integer("num_classes", 0, "num_classes")
+    flags.DEFINE_integer("feature_dim", 0, "feature_dim")
     flags.DEFINE_float("learning_rate", 0.001, "learning_rate")
     flags.DEFINE_float("keep_prob", 0.5, "keep_prob")
     flags.DEFINE_float("minval", -0.5, "minval for random_uniform_initializer")
