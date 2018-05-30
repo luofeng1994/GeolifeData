@@ -38,12 +38,12 @@ def extract(trajetory):
     trajetory2 = trajetory[1:]
     trajetory3 = [[trajetory1[i], trajetory2[i]] for i in range(len(trajetory1))]
     distanceList = [haversine(item[0].lon, item[0].lat, item[1].lon, item[1].lat) for item in trajetory3]
-    accelerationList = [(item[1].velocity-item[0].velocity)/(item[1].timestamp-item[0].timestamp) for item in trajetory3]
+    accelerationList = [(item[1].velocity-item[0].velocity)/(item[1].timestamp-item[0].timestamp + 1) for item in trajetory3]
     timeList = [item[1].timestamp - item[0].timestamp for item in trajetory3]
 
     distance = sum(distanceList)
     timeRange = sum(timeList)
-    avelocity = distance / timeRange
+    avelocity = distance / (timeRange + 1)
     evelocity = np.array([item.velocity for item in trajetory]).mean()
     dvelocity = np.array([item.velocity for item in trajetory]).var()
     velocitySort = set([item.velocity for item in trajetory])
