@@ -145,15 +145,15 @@ def makeTrainData():
                         file_name = file.split('.')[0]
                         file = os.path.join(type_dir_, file)
                         print file
-                        point_list = []
-                        velocity_list = []
-                        velocity_polar_B_list = []
-                        velocity_x_list = []
-                        velocity_y_list = []
-                        acceleration_list = []
-                        acceleration_polar_B_list = []
-                        acceleration_x_list = []
-                        acceleration_y_list = []
+                        point_list = [] #记录所有点
+                        velocity_list = [] #记录每个点的速度
+                        velocity_polar_B_list = [] #记录角速度
+                        velocity_x_list = [] #记录x方向速度
+                        velocity_y_list = [] #记录y方向速度
+                        acceleration_list = [] #记录加速度
+                        acceleration_polar_B_list = [] #记录角加速度
+                        acceleration_x_list = [] #记录x方向加速度
+                        acceleration_y_list = [] #记录y方向加速度
                         with open(file, 'r') as f:
                             for line in f:
                                 line = line.strip('\n').strip()
@@ -161,11 +161,13 @@ def makeTrainData():
                                     continue
                                 lat, lon, aaa, bbb, numberOfDays, date, time = line.split(',')
                                 if not len(date)==0 and not len(time)==0:
-                                    timeStamp = getTimeStamp(date + ' ' + time)
+                                    timeStamp = getTimeStamp(date + ' ' + time) #GeolifeData时间戳
                                 else:
-                                    timeStamp = float(numberOfDays) * 24 * 60 * 60
+                                    timeStamp = float(numberOfDays) * 24 * 60 * 60 #自测数据时间戳
+                                #根据经纬度以及时间戳，生成一个point实例
                                 point_list.append(Point(float(lat), float(lon), timeStamp))
                         for i in range(1, len(point_list)):
+                            #计算每个点的速度
                             point_1 = point_list[i-1]
                             point_2 = point_list[i]
                             distance = haversine(point_1.lon, point_1.lat, point_2.lon, point_2.lat)
@@ -179,6 +181,7 @@ def makeTrainData():
                             velocity_x_list.append(velocityVector[0])
                             velocity_y_list.append(velocityVector[1])
                         for i in range(1, len(velocity_list)):
+                            #计算每个点的加速度
                             velocity_1 = velocity_list[i-1]
                             velocity_2 = velocity_list[i]
                             velocity_x_1 = velocity_x_list[i-1]
@@ -201,7 +204,7 @@ def makeTrainData():
                         print 'extracting machine learning features...'
                         point_list.pop(0)
                         try:
-                            features = extract(point_list)
+                            features = extract(point_list) #提取轨迹总体特征
                             features.append(type)
                             features = tuple(features)
                             feature_data.append(features)
@@ -215,17 +218,17 @@ def makeTrainData():
 
 
 def separateTrainAndTestTrajectory():
-    rootdir = './2018-05-10 12-09-39'
-    train_dir = './trajectory_data/train_tmp/'
-    test_dir = './trajectory_data/test_tmp/'
+    rootdir = './2018-05-10 12-09-39' #指定源数据位置，是上一步骤的保存路径，每次处理都不同
+    train_dir = './trajectory_data/train_tmp/' #训练数据目标文件夹
+    test_dir = './trajectory_data/test_tmp/' #测试数据目标文件夹
     if not os.path.isdir(train_dir):
         os.mkdir(train_dir)
     if not os.path.isdir(test_dir):
         os.mkdir(test_dir)
     files = os.listdir(rootdir)
+    random.shuffle(files) #随机打乱
     random.shuffle(files)
-    random.shuffle(files)
-    index = int(0.8*(len(files)))
+    index = int(0.8*(len(files))) #80%当训练，20%当测试
     train_files = files[:index]
     test_files = files[index:len(files)]
     for file in train_files:
@@ -244,6 +247,7 @@ def separateTrainAndTestTrajectory():
         shutil.move(file, dst_dir)
 
 def cutByWindow():
+    #
     rootdir = './trajectory_data/test_tmp/'
     dstdir = './trajectory_data/test/'
     type_num = dict()
@@ -301,7 +305,7 @@ class Separator:
             for line in file:
                 line = line.strip('\n').strip()
                 raw_data.append(line)
-            if len(raw_data) == 1:
+            if len(raw_data) == 1: #暂时忘了是针对什么情况加的这个判断条件
                 self.num += 1
                 filePath = os.path.join(self.saveDir, str(self.num)+'.plt')
                 writeList(filePath, raw_data)
@@ -315,7 +319,7 @@ class Separator:
                     timeStamp1 = getTimeStamp(date + ' ' + time)
                     _, _, _, _, _, date, time = line2.split(',')
                     timeStamp2 = getTimeStamp(date + ' ' + time)
-                    if timeStamp2-timeStamp1>60*60.0:
+                    if timeStamp2-timeStamp1>60*60.0:  #当前后两点时间间隔大于1小时，将其分割
                         start = end
                         end = i+1
                         self.num += 1
@@ -330,13 +334,17 @@ class Separator:
 
 
     def separateForOneDir(self):
+        #待处理路径所在文件夹
         trajectoryDir = os.path.join(self.dir, 'trajectory')
+        #处理结果保存文件夹
         self.saveDir = self.dir + '/trajectory_separated'
         if os.path.isdir(self.saveDir):
+            #先删除
             shutil.rmtree(self.dir + '/trajectory_separated')
         for file in os.listdir(trajectoryDir):
             filePath = os.path.join(trajectoryDir, file)
             if os.path.isfile(filePath):
+                #对当前路径进行分割
                 self.separateForOneLog(filePath)
         # trajectoryFile = trajectoryDir + '23-29.plt'
         # self.labelForOneLog(trajectoryFile)
@@ -344,7 +352,7 @@ class Separator:
 
 
 class Labeling:
-    type_num = {}
+    type_num = {} #记录每种交通工具的轨迹数量，同时用以待保存轨迹的index
     startTime = ''
     def __init__(self, dir):
         self.labelDict = {}
@@ -361,31 +369,31 @@ class Labeling:
 
     def labelForOneLog(self, fileName):
         print ('start label for file %s'%(fileName))
-        labeledList = []
-        labelForLastPoint = ''
+        labeledList = [] #保存当前轨迹的所有点
+        labelForLastPoint = '' #持续更新，记载前一个点的交通工具类型，用来判断当前点是否应该新开启一条轨迹
         with open(fileName) as file:
             # for i in range(6):
             #     line = next(file)
             for line in file:
                 line = line.strip('\n').strip()
                 lat, lon, aaa, bbb, ccc, date, time = line.split(',')
-                if isVaildDate(date + ' ' + time):
+                if isVaildDate(date + ' ' + time): #如果是正常时间格式则继续。数据中有些时间不是正确格式
                     timeStamp = getTimeStamp(date + ' ' + time)
-                    label = self.getLabelForTimestampFormDict(timeStamp)
+                    label = self.getLabelForTimestampFormDict(timeStamp) #获取这个时间点所使用的交通工具，也就是label
                     #将taxi和car合并
                     if label == 'taxi':
                         label = 'car'
                     list_tmp = [lat, lon, aaa, bbb, ccc, date, time]
-                    if label != 'null' and label == labelForLastPoint:
+                    if label != 'null' and label == labelForLastPoint: #如果当前点label和前一点一样，将当前点加入到当前轨迹中
                         labeledList.append(list_tmp)
-                    elif label != 'null' and label != labelForLastPoint:
+                    elif label != 'null' and label != labelForLastPoint: #如果当前点label和前一点不一样，则保存当前轨迹，并重启一条新轨迹
                         if len(labeledList):
                             if Labeling.type_num.has_key(labelForLastPoint):
                                 Labeling.type_num[labelForLastPoint] = Labeling.type_num[labelForLastPoint] + 1;
                             else:
                                 Labeling.type_num[labelForLastPoint] = 1
                             filePath = './' + Labeling.startTime + '/' + labelForLastPoint + '-' + str(
-                                Labeling.type_num[labelForLastPoint]) + '.plt'
+                                Labeling.type_num[labelForLastPoint]) + '.plt' #保存文件名称由label_{index}.plt组成
                             writeList(filePath, labeledList)
                         # if len(labeledList) >= 5:
                         #     max_length = 300
@@ -426,7 +434,7 @@ class Labeling:
                         startStamp = getTimeStamp(starttimeFormat)
                         endStamp = getTimeStamp(endtimeFormat)
                         if self.labelDict.has_key(label):
-                            self.labelDict[label].append([startStamp, endStamp])
+                            self.labelDict[label].append([startStamp, endStamp])  #记载每种交通工具的所有时间区间
                         else:
                             self.labelDict[label] = []
                             self.labelDict[label].append([startStamp, endStamp])
@@ -453,8 +461,11 @@ def makeLabel():
     for file in files:
         m = os.path.join(rootdir, file)
         print m
+        #针对当前处理的用户，初始化一个打标签器
         labeling = Labeling(m)
+        # 根据当前用户的label.txt文件，构造区间字典，记载不同交通工具对应的时间区间
         labeling.getLabelDict()
+        #对当前用户的所有路径进行打label
         labeling.labelForOneDir()
 
 def separateByTime():
@@ -463,12 +474,16 @@ def separateByTime():
     for file in files:
         m = os.path.join(rootdir, file)
         print m
+        #针对当前处理的用户，初始化一个分割器
         separator = Separator(m)
+        #对当前用户的所有路径进行分割
         separator.separateForOneDir()
 
 if __name__ == '__main__':
-    # separateByTime()
-    # makeLabel()
-    # separateTrainAndTestTrajectory()
-    # cutByWindow()
-    makeTrainData()
+
+    separateByTime()  #根据时间间隔分割路径，当前后两点件时间间隔长于某个阈值，则分割该路径
+    makeLabel() #根据GeolifeData中label.txt将路径进行分割，得到单中交通工具的路径。处理每个用户trajectory文件夹下所有文件,处理结果置于trajectory_separated中
+    separateTrainAndTestTrajectory() #划分训练集和测试集
+    cutByWindow() #将轨迹截断，增加数据量，设定300个点为一条轨迹
+    #上述步骤只针对GeolifeData，makeTrainData()可针对GeolifeData和自己测试的数据
+    makeTrainData() #对轨迹进行处理，得到每个点的速度，加速度，各方向速度，各方向加速度等特征，同时得到每条轨迹的统计特征，例如平均速度，平均加速度等，用于机器学习方法。
