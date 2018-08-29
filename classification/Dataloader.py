@@ -28,7 +28,6 @@ class Dataloder():
         self.num_steps = args.num_steps
         self.classes_to_handle = set(args.classes.split(','))
         self.pointer = 0
-        self.is_measured_data = args.is_measured_data
         if self.is_training == 'train':
             self.data_dir = args.train_data_dir
         elif self.is_training == 'test':
@@ -40,8 +39,6 @@ class Dataloder():
     def loadData(self):
         self.files = []
         self.label_dict = {c: i for i, c in enumerate(self.classes_to_handle)}
-        if self.is_measured_data:
-            self.label_dict = {'walk': 3, 'car': 0, 'bike': 1, 'bus': 2}
         self.reverse_label_dict = dict(zip(self.label_dict.values(), self.label_dict.keys()))
 
         self.data = dict()
@@ -61,8 +58,6 @@ class Dataloder():
         self.raw_num = len(self.files)
         self.batch_num = self.raw_num/self.batch_size+1
         self.num_classes = len(self.classes_to_handle)
-        if self.is_measured_data:
-            self.num_classes = 4
         self.feature_dim = len(vector[0])
         aaa = 1
 

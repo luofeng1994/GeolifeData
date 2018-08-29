@@ -126,14 +126,13 @@ def writeList(filePath, listToWrite):
 def makeTrainData():
     # rootdir = './trajectory_data'
     # save_dir = './Data_Geolife'
-    rootdir = unicode('/media/luofeng/新加卷1/实验室/项目/轨迹预测与分类/gps data/measured', "utf-8")
-    save_dir= './Data_measured'
-    train_dir = 'all_cl'
-    test_dir = 'all_init'
+    rootdir = unicode('/media/luofeng/新加卷/实验室/项目/轨迹预测与分类/gps data/measured/test', "utf-8")
+    save_dir= './Data_measured/test'
+    target_dir = ['all', 'all_init', 'all_cl']
     dirs = os.listdir(rootdir)
     for dir in dirs:
         dir_ = os.path.join(rootdir, dir)
-        if os.path.isdir(dir_) and (dir == train_dir or dir == test_dir):
+        if os.path.isdir(dir_) and (dir in target_dir):
             feature_data = []
             type_dirs = os.listdir(dir_)
             for type_dir in type_dirs:
@@ -394,6 +393,8 @@ class Labeling:
                                 Labeling.type_num[labelForLastPoint] = 1
                             filePath = './' + Labeling.startTime + '/' + labelForLastPoint + '-' + str(
                                 Labeling.type_num[labelForLastPoint]) + '.plt' #保存文件名称由label_{index}.plt组成
+                            prefix = 'OziExplorer Track Point File Version 2.1\nWGS 84\nAltitude is in Feet\nReserved 3\n0,2,255,Converted,0,0,2,8421376\n%d' % (len(labeledList))
+                            labeledList.insert(0, prefix)
                             writeList(filePath, labeledList)
                         # if len(labeledList) >= 5:
                         #     max_length = 300
@@ -455,7 +456,7 @@ def test():
     labeling.getLabelDict()
     labeling.labelForOneDir()
 def makeLabel():
-    rootdir = unicode('/media/luofeng/新加卷1/实验室/项目/轨迹预测与分类/gps data/Geolife Trajectories with transportation mode labels', 'utf8')
+    rootdir = unicode('/media/luofeng/新加卷/实验室/项目/轨迹预测与分类/gps data/Geolife Trajectories with transportation mode labels', 'utf8')
     Labeling.startTime = getTime()
     files = os.listdir(rootdir)
     for file in files:
@@ -481,9 +482,9 @@ def separateByTime():
 
 if __name__ == '__main__':
 
-    separateByTime()  #根据时间间隔分割路径，当前后两点件时间间隔长于某个阈值，则分割该路径
-    makeLabel() #根据GeolifeData中label.txt将路径进行分割，得到单中交通工具的路径。处理每个用户trajectory文件夹下所有文件,处理结果置于trajectory_separated中
-    separateTrainAndTestTrajectory() #划分训练集和测试集
-    cutByWindow() #将轨迹截断，增加数据量，设定300个点为一条轨迹
+    # separateByTime()  #根据时间间隔分割路径，当前后两点间时间间隔长于某个阈值，则分割该路径。处理结果置于trajectory_separated中
+    makeLabel() #根据GeolifeData中label.txt将路径进行分割，得到单中交通工具的路径。处理每个用户trajectory文件夹下所有文件,处理结果置于本项目中以时间开头的文件夹
+    # separateTrainAndTestTrajectory() #划分训练集和测试集
+    # cutByWindow() #将轨迹截断，增加数据量，设定300个点为一条轨迹
     #上述步骤只针对GeolifeData，makeTrainData()可针对GeolifeData和自己测试的数据
-    makeTrainData() #对轨迹进行处理，得到每个点的速度，加速度，各方向速度，各方向加速度等特征，同时得到每条轨迹的统计特征，例如平均速度，平均加速度等，用于机器学习方法。
+    # makeTrainData() #对轨迹进行处理，得到每个点的速度，加速度，各方向速度，各方向加速度等特征，同时得到每条轨迹的统计特征，例如平均速度，平均加速度等，用于机器学习方法。

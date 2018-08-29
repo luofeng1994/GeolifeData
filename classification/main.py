@@ -8,6 +8,7 @@ import os
 import logging
 import numpy as np
 import pandas as pd
+from sklearn import metrics
 import sys
 os.environ["CUDA_VISIBLE_DEVICES"]='0'
 
@@ -136,6 +137,8 @@ def test(args):
     count = 0
     correct_count = 0
 
+    y_true = None
+    y_pred = None
     with tf.Session() as sess:
         saver = tf.train.Saver(tf.all_variables())
         ckpt = tf.train.get_checkpoint_state(args.save_dir)
@@ -144,14 +147,22 @@ def test(args):
             for _ in range(dataloader.batch_num):
                 x, y, length = dataloader.next_batch()
                 predict = model.predict(sess, x, length)
-                for i in range(predict.shape[0]):
-                    record = '{}:{}'.format(dataloader.reverse_label_dict[y[i]], dataloader.reverse_label_dict[predict[i]])
-                    logger.info(record)
-                count += predict.shape[0]
-                kkk = sum(y==predict)
-                correct_count += sum(y==predict)
-    kk = 'count:{}, correct_count{}, correct_rate:{}'.format(count, correct_count, correct_count/count)
-    logger.info(kk)
+                y_true = np.concatenate((y_true, y)) if y_true is not None else y
+                y_pred = np.concatenate((y_pred, predict)) if y_pred is not None else predict
+    accuracy = metrics.accuracy_score(y_true, y_pred)
+    precision = metrics.precision_score(y_true, y_pred, average=None)
+    recall = metrics.recall_score(y_true, y_pred, average=None)
+    f1_score = metrics.f1_score(y_true, y_pred, average=None)
+    record = args.__flags
+    record['accuracy'] = accuracy
+    for cls in dataloader.classes_to_handle:
+        label_index = dataloader.label_dict[cls]
+        record['%s_precision' % cls] = precision[label_index]
+        record['%s_recll' % cls] = recall[label_index]
+        record['%s_f1_score' % cls] = f1_score[label_index]
+        logger.info('%s: precision: %.2f%%, recall: %.2f%%, f1_socre: %.2f%%' % (
+        cls, 100 * precision[label_index], 100 * recall[label_index], 100 * f1_score[label_index]))
+    logger.info('accuracy: %.2f%%' % (100 * accuracy))
     if args.record:
         args.accuracy = correct_count/count
         appendRecord(args.__flags)
@@ -206,10 +217,9 @@ if __name__ == '__main__':
                         "initializer mode: random_uniform_initializer/ random_normal_initializer/ truncated_normal_initializer, default is truncated_normal_initializer")
     flags.DEFINE_string("rnn_mode", 'lstm', "rnn_mode: lstm/gru, default is lstm cell")
     flags.DEFINE_string("section", 'DNN', "section")
-    flags.DEFINE_string("is_training", 'train', "train or test")
+    flags.DEFINE_string("is_training", 'test', "train or test")
     flags.DEFINE_bool("bi_directional", False, "True")
     flags.DEFINE_bool("attention", False, "attention")
-    flags.DEFINE_bool("is_measured_data", False, "is_measured_data")
     flags.DEFINE_bool("record", False, "whether to record the running result")
     FLAGS = flags.FLAGS
     main(FLAGS)
